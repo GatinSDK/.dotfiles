@@ -757,7 +757,9 @@ require("lazy").setup({
 		config = function()
 			require("oil").setup({
 				default_file_explorer = true,
-				columns = {},
+				columns = {
+					"icon",
+				},
 				delete_to_trash = true,
 				lsp_file_methods = {
 					enabled = true,
@@ -768,7 +770,7 @@ require("lazy").setup({
 		end,
 		-- Optional dependencies
 		-- dependencies = { { "echasnovski/mini.icons", opts = {} } },
-		-- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
+		dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
 	},
 	{
 		"folke/trouble.nvim",
