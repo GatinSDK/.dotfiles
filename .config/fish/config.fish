@@ -107,5 +107,8 @@ alias cd=__zoxide_z
 abbr --erase cdi &>/dev/null
 alias cdi=__zoxide_zi
 
+alias v=nvim
+alias lg=lazygit
+
 set -gx VOLTA_HOME "$HOME/.volta"
 set -gx PATH "$VOLTA_HOME/bin" $PATH
