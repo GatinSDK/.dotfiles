@@ -496,7 +496,7 @@ require("lazy").setup({
 		cmd = { "ConformInfo" },
 		keys = {
 			{
-				"<leader>f",
+				"<leader>ff",
 				function()
 					require("conform").format({ async = true, lsp_format = "fallback" })
 				end,
@@ -528,6 +528,8 @@ require("lazy").setup({
 				-- python = { "isort", "black" },
 				javascript = { "prettierd" },
 				javascriptreact = { "prettierd" },
+				typescript = { "prettierd" },
+				typescriptreact = { "prettierd" },
 				css = { "prettierd" },
 				html = { "prettierd" },
 				--
@@ -655,7 +657,6 @@ require("lazy").setup({
 			})
 		end,
 	},
-
 	{ -- You can easily change to a different colorscheme.
 		-- Change the name of the colorscheme plugin below, and then
 		-- change the command in the config to whatever the name of that colorscheme is.

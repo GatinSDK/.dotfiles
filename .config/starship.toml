@@ -11,4 +11,4 @@ error_symbol = '[➜](bold error)'
 vimcmd_symbol = '[➜](bold directory)'
 
 [directory]
-style = 'bold directory'
+# style = 'bold directory'
