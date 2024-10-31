@@ -678,6 +678,12 @@ require("lazy").setup({
 		"slugbyte/lackluster.nvim",
 	},
 	{
+		"killitar/obscure.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+	},
+	{
 		"vague2k/vague.nvim",
 		config = function()
 			require("vague").setup({
