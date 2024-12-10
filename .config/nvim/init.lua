@@ -667,6 +667,13 @@ require("lazy").setup({
 		"bettervim/yugen.nvim",
 		priority = 1000, -- Make sure to load this before all the other start plugins.
 		init = function()
+			require("yugen").setup({
+				bold_vert_split = false, -- use bold vertical separators
+				dim_nc_background = false, -- dim 'non-current' window backgrounds
+				disable_background = false, -- disable background
+				disable_float_background = false, -- disable background for floats
+				disable_italics = false, -- disable italics
+			})
 			-- Load the colorscheme here.
 			-- Like many other themes, this one has different styles, and you could load
 			-- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
@@ -689,6 +696,7 @@ require("lazy").setup({
 		"vague2k/vague.nvim",
 		config = function()
 			require("vague").setup({
+				transparent = true,
 				-- optional configuration here transparent = false, -- don't set background
 				style = {
 					-- "none" is the same thing as default. But "italic" and "bold" are also valid options
