@@ -1,6 +1,12 @@
 # .dotfiles
 neovim + tmux workflow
 
+![Screenshot1](https://i.imgur.com/tQXam58.png) 
+
+![Screenshot2](https://i.imgur.com/NkPIRbx.png) 
+
+![Screenshot3](https://i.imgur.com/09nchvy.png) 
+
 ## Install
 ```bash
 git clone https://github.com/GatinSDK/.dotfiles.git
@@ -11,7 +17,7 @@ stow .
 ## Packages
 
 ``
-neovim tmux fish starship zoxide fzf sesh stow ripgrep git node npm sed unzip gcc make base-devel curl openssh
+neovim tmux fish starship zoxide fzf sesh stow ripgrep git node npm sed unzip gcc make base-devel curl openssh lazygit lazydocker
 ``
 
 ## Font
