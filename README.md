@@ -3,9 +3,9 @@ neovim + tmux workflow
 
 ![Screenshot1](https://i.imgur.com/tQXam58.png) 
 
-![Screenshot2](https://i.imgur.com/NkPIRbx.png) 
+![Screenshot2](https://i.imgur.com/pmL05Kf.png) 
 
-![Screenshot3](https://i.imgur.com/09nchvy.png) 
+![Screenshot3](https://i.imgur.com/S7rUGeJ.png) 
 
 ## Install
 ```bash
