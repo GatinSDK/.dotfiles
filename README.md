@@ -1,7 +1,7 @@
 # .dotfiles
 neovim + tmux workflow
 
-![Screenshot1](https://i.imgur.com/tQXam58.png) 
+![Screenshot1](https://i.imgur.com/x2Ovweg.png) 
 
 ![Screenshot2](https://i.imgur.com/pmL05Kf.png) 
 
