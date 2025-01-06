@@ -4,6 +4,11 @@ vim.g.have_nerd_font = true
 vim.g.netrw_banner = 0
 
 -- Settings
+vim.fn.sign_define("DiagnosticSignError", { text = "", texthl = "DiagnosticSignError" })
+vim.fn.sign_define("DiagnosticSignWarn", { text = "", texthl = "DiagnosticSignWarn" })
+vim.fn.sign_define("DiagnosticSignInfo", { text = "", texthl = "DiagnosticSignInfo" })
+vim.fn.sign_define("DiagnosticSignHint", { text = "", texthl = "DiagnosticSignHint" })
+
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.swapfile = false
@@ -665,23 +670,30 @@ require("lazy").setup({
 		--
 		-- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
 		"bettervim/yugen.nvim",
+		lazy = false,
 		priority = 1000, -- Make sure to load this before all the other start plugins.
-		init = function()
+		config = function()
 			require("yugen").setup({
-				bold_vert_split = false, -- use bold vertical separators
-				dim_nc_background = false, -- dim 'non-current' window backgrounds
-				disable_background = false, -- disable background
-				disable_float_background = false, -- disable background for floats
-				disable_italics = false, -- disable italics
+				bold_vert_split = false,
+				dim_nc_background = false,
+				disable_background = true,
+				disable_float_background = true,
+				disable_italics = false,
 			})
 			-- Load the colorscheme here.
 			-- Like many other themes, this one has different styles, and you could load
 			-- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-			vim.cmd.colorscheme("yugen")
+			-- vim.cmd.colorscheme("yugen")
 
 			-- You can configure highlights by doing something like:
 			-- vim.cmd.hi("Comment gui=none")
 		end,
+		init = function()
+			vim.cmd("colorscheme yugen")
+		end,
+	},
+	{
+		"alejandrolaguna20/noctis.nvim",
 	},
 	{
 		"slugbyte/lackluster.nvim",
@@ -690,7 +702,9 @@ require("lazy").setup({
 		"killitar/obscure.nvim",
 		lazy = false,
 		priority = 1000,
-		opts = {},
+		opts = {
+			transparent = true,
+		},
 	},
 	{
 		"vague2k/vague.nvim",
@@ -833,6 +847,19 @@ require("lazy").setup({
 				"<cmd>Trouble qflist toggle<cr>",
 				desc = "Quickfix List (Trouble)",
 			},
+		},
+	},
+	{
+		"otavioschwanck/arrow.nvim",
+		dependencies = {
+			{ "nvim-tree/nvim-web-devicons" },
+			-- or if using `mini.icons`
+			-- { "echasnovski/mini.icons" },
+		},
+		opts = {
+			show_icons = true,
+			leader_key = ";", -- Recommended to be a single key
+			buffer_leader_key = "m", -- Per Buffer Mappings
 		},
 	},
 	{ -- Highlight, edit, and navigate code
