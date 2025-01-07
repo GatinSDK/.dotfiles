@@ -703,14 +703,14 @@ require("lazy").setup({
 		lazy = false,
 		priority = 1000,
 		opts = {
-			transparent = true,
+			transparent = false,
 		},
 	},
 	{
 		"vague2k/vague.nvim",
 		config = function()
 			require("vague").setup({
-				transparent = true,
+				transparent = false,
 				-- optional configuration here transparent = false, -- don't set background
 				style = {
 					-- "none" is the same thing as default. But "italic" and "bold" are also valid options
