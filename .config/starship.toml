@@ -3,11 +3,12 @@ palette = 'fish'
 [palettes.fish]
 directory =  '#E2FD3B'
 error = '#d41e39'
-success = '#717375'
+# success = '#717375'
+success = '#5fedaa'
 
 [character]
-success_symbol = '[➜](bold success)'
-error_symbol = '[➜](bold error)'
+success_symbol = '[\$](bold success)'
+error_symbol = '[\$](bold error)'
 vimcmd_symbol = '[➜](bold directory)'
 
 [directory]
