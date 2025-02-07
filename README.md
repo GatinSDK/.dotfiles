@@ -48,4 +48,29 @@ neovim tmux fish starship zoxide fzf sesh stow ripgrep git node npm sed unzip gc
   "white": "#FFFFFF",
   "yellow": "#F5C505"
 }
+{
+  "background": "#1C1C1C",
+  "black": "#1F2229",
+  "blue": "#367BF0",
+  "brightBlack": "#198388",
+  "brightBlue": "#277FFF",
+  "brightCyan": "#05A1F7",
+  "brightGreen": "#47D4B9",
+  "brightPurple": "#962AC3",
+  "brightRed": "#EC0101",
+  "brightWhite": "#FFFFFF",
+  "brightYellow": "#FF8A18",
+  "cursorColor": "#FFFFFF",
+  "cyan": "#49AEE6",
+  "foreground": "#FFFFFF",
+  "green": "#5EBDAB",
+  "name": "Kali",
+  "purple": "#9755B3",
+  "red": "#D41919",
+  "selectionBackground": "#3B3B3B",
+  "white": "#E6E6E6",
+  "yellow": "#FEA44C"
+        }
+
+
 ```
