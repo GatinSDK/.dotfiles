@@ -70,7 +70,7 @@ neovim tmux fish starship zoxide fzf sesh stow ripgrep git node npm sed unzip gc
   "selectionBackground": "#3B3B3B",
   "white": "#E6E6E6",
   "yellow": "#FEA44C"
-        }
+}
 
 
 ```
