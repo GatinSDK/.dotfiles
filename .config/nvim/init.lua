@@ -695,9 +695,6 @@ require("lazy").setup({
 		end,
 	},
 	{
-		"alejandrolaguna20/noctis.nvim",
-	},
-	{
 		"slugbyte/lackluster.nvim",
 	},
 	{
