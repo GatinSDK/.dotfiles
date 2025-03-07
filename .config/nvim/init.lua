@@ -864,6 +864,9 @@ require("lazy").setup({
 			buffer_leader_key = "m", -- Per Buffer Mappings
 		},
 	},
+	{
+		"nvim-treesitter/nvim-treesitter-context",
+	},
 	{ -- Highlight, edit, and navigate code
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
