@@ -9,6 +9,9 @@ vim.fn.sign_define("DiagnosticSignWarn", { text = "", texthl = "DiagnosticSig
 vim.fn.sign_define("DiagnosticSignInfo", { text = "", texthl = "DiagnosticSignInfo" })
 vim.fn.sign_define("DiagnosticSignHint", { text = "", texthl = "DiagnosticSignHint" })
 
+vim.keymap.set("n", "<M-h>", "<cmd>bprev<CR>")
+vim.keymap.set("n", "<M-l>", "<cmd>bnext<CR>")
+
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.swapfile = false
@@ -225,11 +228,11 @@ require("lazy").setup({
 			local builtin = require("telescope.builtin")
 			vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "[S]earch [H]elp" })
 			vim.keymap.set("n", "<leader>sk", builtin.keymaps, { desc = "[S]earch [K]eymaps" })
-			vim.keymap.set("n", "<leader>f", builtin.find_files, { desc = "[S]earch [F]iles" })
-			vim.keymap.set("n", "<leader>o", builtin.git_files, { desc = "[S]earch [F]iles" })
+			vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "[S]earch [F]iles" })
+			vim.keymap.set("n", "<leader>gf", builtin.git_files, { desc = "[S]earch [F]iles" })
 			vim.keymap.set("n", "<leader>ss", builtin.builtin, { desc = "[S]earch [S]elect Telescope" })
 			vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
-			vim.keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "[S]earch by [G]rep" })
+			vim.keymap.set("n", "<leader>lg", builtin.live_grep, { desc = "[S]earch by [G]rep" })
 			vim.keymap.set("n", "<leader>sd", builtin.diagnostics, { desc = "[S]earch [D]iagnostics" })
 			vim.keymap.set("n", "<leader>sr", builtin.resume, { desc = "[S]earch [R]esume" })
 			vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
@@ -709,7 +712,7 @@ require("lazy").setup({
 		"vague2k/vague.nvim",
 		config = function()
 			require("vague").setup({
-				transparent = false,
+				transparent = true,
 				-- optional configuration here transparent = false, -- don't set background
 				style = {
 					-- "none" is the same thing as default. But "italic" and "bold" are also valid options
@@ -857,8 +860,18 @@ require("lazy").setup({
 		},
 		opts = {
 			show_icons = true,
-			leader_key = ";", -- Recommended to be a single key
-			buffer_leader_key = "m", -- Per Buffer Mappings
+			leader_key = "m", -- Recommended to be a single key
+			-- buffer_leader_key = "", -- Per Buffer Mappings
+		},
+	},
+	{
+		"OlegGulevskyy/better-ts-errors.nvim",
+		dependencies = { "MunifTanjim/nui.nvim" },
+		config = {
+			keymaps = {
+				toggle = "<leader>dd", -- default '<leader>dd'
+				go_to_definition = "<leader>dx", -- default '<leader>dx'
+			},
 		},
 	},
 	{
