@@ -124,6 +124,25 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
+-- Save buffer line
+vim.api.nvim_create_autocmd("BufLeave", {
+	pattern = "*",
+	callback = function()
+		if not vim.bo.buftype == "nofile" then
+			vim.cmd("mkview")
+		end
+	end,
+})
+
+vim.api.nvim_create_autocmd("BufEnter", {
+	pattern = "*",
+	callback = function()
+		if not vim.bo.buftype == "nofile" then
+			vim.cmd("silent! loadview")
+		end
+	end,
+})
+
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
 --  See `:help vim.highlight.on_yank()`
