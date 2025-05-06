@@ -710,6 +710,11 @@ require("lazy").setup({
 		"bettervim/yugen.nvim",
 		priority = 1000, -- Make sure to load this before all the other start plugins.
 		config = function()
+			require("yugen").setup({
+				transparent = true, -- disable background
+				statusline_transparent = true, -- disable background for floats / statusline
+			})
+
 			vim.cmd.colorscheme("yugen")
 		end,
 	},

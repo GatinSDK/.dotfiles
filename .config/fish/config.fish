@@ -4,8 +4,8 @@ and not set -q TMUX
   tmux new-session -A -s cozy
 end
 
-# fish_vi_key_bindings
-fish_default_key_bindings
+fish_vi_key_bindings
+# fish_default_key_bindings
 set fish_greeting
 starship init fish | source
 fzf --fish | source

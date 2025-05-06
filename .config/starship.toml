@@ -5,11 +5,12 @@ directory =  '#E2FD3B'
 error = '#d41e39'
 # success = '#717375'
 success = '#5fedaa'
+vim = '#FFBE89'
 
 [character]
 success_symbol = '[\$](bold success)'
 error_symbol = '[\$](bold error)'
-vimcmd_symbol = '[➜](bold directory)'
+vimcmd_symbol = '[\$](bold vim)'
 
 [directory]
 # style = 'bold directory'
