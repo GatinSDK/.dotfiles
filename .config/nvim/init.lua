@@ -328,8 +328,8 @@ require("lazy").setup({
 			-- Automatically install LSPs and related tools to stdpath for Neovim
 			-- Mason must be loaded before its dependents so we need to set it up here.
 			-- NOTE: `opts = {}` is the same as calling `require('mason').setup({})`
-			{ "williamboman/mason.nvim", opts = {} },
-			"williamboman/mason-lspconfig.nvim",
+			{ "mason-org/mason.nvim", version = "1.11.0", opts = {} },
+			{ "mason-org/mason-lspconfig.nvim", version = "1.32.0" },
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
 
 			-- Useful status updates for LSP.
@@ -510,7 +510,7 @@ require("lazy").setup({
 				--    https://github.com/pmizio/typescript-tools.nvim
 				--
 				-- But for many setups, the LSP (`ts_ls`) will work just fine
-				-- ts_ls = {},
+				ts_ls = {},
 				html = {},
 				cssls = {},
 				prettierd = {},
@@ -696,23 +696,17 @@ require("lazy").setup({
 		},
 	},
 
-	{
-		"pmizio/typescript-tools.nvim",
-		dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-		opts = {},
-	},
-
 	{ -- You can easily change to a different colorscheme.
 		-- Change the name of the colorscheme plugin below, and then
 		-- change the command in the config to whatever the name of that colorscheme is.
 		--
 		-- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-		"bettervim/yugen.nvim",
+		"GatinSDK/yugen.nvim",
 		priority = 1000, -- Make sure to load this before all the other start plugins.
 		config = function()
 			require("yugen").setup({
-				transparent = true, -- disable background
-				statusline_transparent = true, -- disable background for floats / statusline
+				transparent = true,
+				transparent_statusline = true,
 			})
 
 			vim.cmd.colorscheme("yugen")
@@ -721,9 +715,26 @@ require("lazy").setup({
 
 	{
 		"vague2k/vague.nvim",
+		priority = 1000,
 		config = function()
 			require("vague").setup({
 				-- optional configuration here
+				transparent = true,
+			})
+		end,
+	},
+
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+		priority = 1000,
+		config = function()
+			require("catppuccin").setup({
+				transparent_background = true,
+				styles = {
+					comments = { "bold" },
+					conditionals = { "bold" },
+				},
 			})
 		end,
 	},
