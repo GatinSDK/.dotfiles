@@ -145,12 +145,12 @@ vim.api.nvim_create_autocmd("BufEnter", {
 
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
---  See `:help vim.highlight.on_yank()`
+--  See `:help vim.hl.on_yank()`
 vim.api.nvim_create_autocmd("TextYankPost", {
 	desc = "Highlight when yanking (copying) text",
 	group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
 	callback = function()
-		vim.highlight.on_yank()
+		vim.hl.on_yank()
 	end,
 })
 
@@ -170,7 +170,7 @@ vim.opt.rtp:prepend(lazypath)
 --
 -- NOTE: Here is where you install your plugins.
 require("lazy").setup({
-	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
+	"NMAC427/guess-indent.nvim", -- Detect tabstop and shiftwidth automatically
 	{
 		"folke/which-key.nvim",
 		event = "VimEnter", -- Sets the loading event to 'VimEnter'
@@ -324,6 +324,7 @@ require("lazy").setup({
 	{
 		-- Main LSP Configuration
 		"neovim/nvim-lspconfig",
+		version = "1.8.0",
 		dependencies = {
 			-- Automatically install LSPs and related tools to stdpath for Neovim
 			-- Mason must be loaded before its dependents so we need to set it up here.
@@ -731,6 +732,7 @@ require("lazy").setup({
 		config = function()
 			require("catppuccin").setup({
 				transparent_background = true,
+				no_italic = true,
 				styles = {
 					comments = { "bold" },
 					conditionals = { "bold" },
