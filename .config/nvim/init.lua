@@ -17,14 +17,6 @@ vim.opt.mouse = "a"
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = true
 
--- Sync clipboard between OS and Neovim.
---  Schedule the setting after `UiEnter` because it can increase startup-time.
---  Remove this option if you want your OS clipboard to remain independent.
---  See `:help 'clipboard'`
-vim.schedule(function()
-	vim.opt.clipboard = "unnamedplus"
-end)
-
 -- Enable break indent
 vim.opt.breakindent = true
 
@@ -76,7 +68,7 @@ vim.opt.confirm = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- Diagnostic keymaps
-vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
+-- vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 
 -- Explorer
 -- vim.keymap.set("n", "-", vim.cmd.Ex)
@@ -173,7 +165,7 @@ require("lazy").setup({
 	"NMAC427/guess-indent.nvim", -- Detect tabstop and shiftwidth automatically
 	{
 		"folke/which-key.nvim",
-		event = "VimEnter", -- Sets the loading event to 'VimEnter'
+		event = "VeryLazy", -- Sets the loading event to 'VimEnter'
 		opts = {
 			-- delay between pressing a key and opening which-key (milliseconds)
 			-- this setting is independent of vim.opt.timeoutlen
@@ -881,18 +873,10 @@ require("lazy").setup({
 		-- [[ Configure Treesitter ]] See `:help nvim-treesitter`
 		opts = {
 			ensure_installed = {
-				"bash",
-				"c",
-				"diff",
 				"html",
 				"css",
 				"lua",
-				"luadoc",
-				"markdown",
-				"markdown_inline",
-				"query",
-				"vim",
-				"vimdoc",
+				"javascript",
 			},
 			-- Autoinstall languages that are not installed
 			auto_install = true,
