@@ -727,22 +727,6 @@ require("lazy").setup({
 	},
 
 	{
-		"catppuccin/nvim",
-		name = "catppuccin",
-		priority = 1000,
-		config = function()
-			require("catppuccin").setup({
-				transparent_background = true,
-				no_italic = true,
-				styles = {
-					comments = { "bold" },
-					conditionals = { "bold" },
-				},
-			})
-		end,
-	},
-
-	{
 		"brenoprata10/nvim-highlight-colors",
 		config = function()
 			require("nvim-highlight-colors").setup({

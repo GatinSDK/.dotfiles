@@ -16,10 +16,16 @@ stow .
 
 ## Packages
 
-``
-neovim tmux fish starship zoxide fzf sesh stow ripgrep git node npm sed unzip gcc make base-devel curl openssh lazygit lazydocker
-``
+Arch
 
+```bash
+sudo pacman -S neovim tmux fish starship zoxide fzf stow ripgrep git sed unzip base-devel openssh lazygit python3
+```
+Others
+
+``
+fnm yay sesh uv bun cuda opencl-mesa
+``
 ## Font
 [Maple Font](https://github.com/subframe7536/maple-font)
 
