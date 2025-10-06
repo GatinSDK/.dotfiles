@@ -8,7 +8,7 @@ vim = '#FFBE89'
 
 [character]
 success_symbol = '[\$](bold bright-green)'
-error_symbol = '[\$](bold brigt-red)'
+error_symbol = '[\$](bold bright-red)'
 vimcmd_symbol = '[\$](bold vim)'
 
 [directory]
