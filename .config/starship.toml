@@ -13,3 +13,14 @@ vimcmd_symbol = '[\$](bold vim)'
 
 [directory]
 style = 'bold bright-blue'
+
+[python]
+disabled = true
+
+[custom.uv_python]
+command = 'uv python find --show-version'
+format = 'via [${symbol}(${output} )]($style)'
+symbol = " "
+detect_extensions = ['py', 'ipynb']
+detect_files = ['.python-version', 'Pipfile', '__init__.py', 'pyproject.toml', 'requirements.txt', 'setup.py', 'tox.ini', 'uv.lock', 'pylock.toml']
+style = "bold blue"
