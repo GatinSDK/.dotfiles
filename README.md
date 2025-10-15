@@ -1,7 +1,7 @@
 # .dotfiles
 neovim + tmux workflow
 
-![Screenshot1](https://i.imgur.com/VfpIfqS.png) 
+![Screenshot1](https://i.imgur.com/LJ7ITKh.png) 
 
 ## Install
 ```bash

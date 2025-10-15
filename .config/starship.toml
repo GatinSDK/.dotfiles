@@ -1,26 +1,31 @@
+format = '''
+[$username@$hostname](gray) [$directory](white)[$git_status](gray) [$character](symbol)'''
+right_format = ''
+
 palette = 'fish'
 
 [palettes.fish]
-directory =  '#E2FD3B'
-error = '#d41e39'
-success = '#5fedaa'
+symbol = '#DE2670'
 vim = '#FFBE89'
+gray = '#A0A0A0'
+
+[username]
+show_always = true
+format = '$user'
+
+[hostname]
+ssh_only = false
+format = '$hostname'
+
+[git_status]
+format = '$all_status'
 
 [character]
-success_symbol = '[\$](bold bright-green)'
-error_symbol = '[\$](bold bright-red)'
-vimcmd_symbol = '[\$](bold vim)'
+success_symbol = '[\$](symbol)'
+error_symbol = '[\$](symbol)'
+vimcmd_symbol = '[\$](vim)'
 
 [directory]
-style = 'bold bright-blue'
-
-[python]
-disabled = true
-
-[custom.uv_python]
-command = 'uv python find --show-version'
-format = 'via [${symbol}(${output} )]($style)'
-symbol = " "
-detect_extensions = ['py', 'ipynb']
-detect_files = ['.python-version', 'Pipfile', '__init__.py', 'pyproject.toml', 'requirements.txt', 'setup.py', 'tox.ini', 'uv.lock', 'pylock.toml']
-style = "bold blue"
+style = 'bold white'
+truncation_length = 1
+format = '[$path]($style)[$read_only]($read_only_style)'
