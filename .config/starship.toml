@@ -1,5 +1,5 @@
 format = '''
-[$username@$hostname](gray) [$directory](white)[$git_status](gray) [$character](symbol)'''
+[$username@$hostname](gray) [$directory](white)[$git_status](gray) [$character](symbol)$jobs'''
 right_format = ''
 
 palette = 'fish'

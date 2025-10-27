@@ -19,6 +19,8 @@ vim.opt.showmode = true
 
 -- Enable break indent
 vim.opt.breakindent = true
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
 
 -- Save undo history
 vim.opt.undofile = true
@@ -162,7 +164,9 @@ vim.opt.rtp:prepend(lazypath)
 --
 -- NOTE: Here is where you install your plugins.
 require("lazy").setup({
-	"NMAC427/guess-indent.nvim", -- Detect tabstop and shiftwidth automatically
+	{
+		"Darazaki/indent-o-matic",
+	},
 	{
 		"folke/which-key.nvim",
 		event = "VeryLazy", -- Sets the loading event to 'VimEnter'
@@ -590,6 +594,7 @@ require("lazy").setup({
 				typescriptreact = { "prettierd" },
 				css = { "prettierd" },
 				html = { "prettierd" },
+				json = { "prettierd" },
 				python = {
 					-- To fix auto-fixable lint errors.
 					"ruff_fix",
