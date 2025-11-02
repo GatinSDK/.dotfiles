@@ -727,6 +727,8 @@ require("lazy").setup({
 			require("vague").setup({
 				-- optional configuration here
 				transparent = true,
+				italic = false,
+				bold = false,
 			})
 		end,
 	},
