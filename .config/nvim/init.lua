@@ -714,6 +714,9 @@ require("lazy").setup({
 			require("yugen").setup({
 				transparent = true,
 				transparent_statusline = true,
+				colors = {
+					-- primary = "#f00c49",
+				},
 			})
 
 			vim.cmd.colorscheme("yugen")
