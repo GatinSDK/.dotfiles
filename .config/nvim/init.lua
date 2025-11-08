@@ -330,7 +330,7 @@ require("lazy").setup({
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
 
 			-- Useful status updates for LSP.
-			{ "j-hui/fidget.nvim", opts = {} },
+			-- { "j-hui/fidget.nvim", opts = {} },
 
 			-- Allows extra capabilities provided by blink.cmp
 			"saghen/blink.cmp",
@@ -725,7 +725,6 @@ require("lazy").setup({
 
 	{
 		"vague2k/vague.nvim",
-		priority = 1000,
 		config = function()
 			require("vague").setup({
 				-- optional configuration here
